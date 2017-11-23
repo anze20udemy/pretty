@@ -5,6 +5,8 @@
 
     RewriteEngine On
 
+    php_value max_execution_time 300
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$

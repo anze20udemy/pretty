@@ -35,4 +35,30 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id'     => env('FACEBOOK_ID'),
+        'client_secret' => env('FACEBOOK_SECRET'),
+        'redirect'      => env('FACEBOOK_URL'),
+    ],
+
+//    'twitter' => [
+//        'client_id'     => 'nzUIRh2k1PSEDk7Aabe7z8BFW',
+//        'client_secret' => '2luEDKwiaHIKARPiFuivh7aCA66jPoffjuff8IrLmZxyj4dabl',
+//        'redirect'      => 'http://pretty.dev/auth/twitter/callback',
+//    ],
+
+    'twitter' => [
+        'client_id'     => env('TWITTER_ID'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect'      => env('TWITTER_URL'),
+    ],
+
+    'google' => [
+        'client_id'     => env('GOOGLE_ID'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect'      => env('GOOGLE_URL'),
+    ],
+
+
+
 ];
