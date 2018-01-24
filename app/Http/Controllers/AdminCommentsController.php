@@ -49,6 +49,7 @@ class AdminCommentsController extends Controller
 
             'user'    =>Auth::user()->name,
             'body'      =>$request->body,
+            'rating_id' =>$request->rating
 //            'avatar'      =>Auth::user()->avatar
 
         ];
@@ -114,6 +115,12 @@ class AdminCommentsController extends Controller
     public function comments()
     {
         $comments = Comment::all()->where('is_active',1);
+
+
+
+
+
+
 
         return view('mnenja', compact('comments'));
     }

@@ -11,6 +11,7 @@ class Comment extends Model
 
         'user_id',
         'body',
+        'rating',
         'is_active'
 
 

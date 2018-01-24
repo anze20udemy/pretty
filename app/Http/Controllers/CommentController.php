@@ -8,11 +8,37 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+
+    // S to funkcijo urejam komentarje in ratinge na front-end strani
     public function index()
     {
-        $comments = Comment::all()->where('is_active',1);
+        $comments = Comment::all()->where('is_active', 1);
 
-        return view('mnenja', compact('comments'));
+
+
+
+
+
+
+        $numRating = Count($comments);
+        $sumRating = $comments->sum('rating');
+
+
+     $avgRating = ($sumRating / $numRating);
+
+        $star1= $comments->where('rating', 1)->count();
+        $star2= $comments->where('rating', 2)->count();
+        $star3= $comments->where('rating', 3)->count();
+        $star4= $comments->where('rating', 4)->count();
+        $star5= $comments->where('rating', 5)->count();
+
+
+
+
+
+
+        return view('mnenja', compact('comments', 'numRating', 'avgRating', 'sumRating',
+            'star1','star2','star3','star4','star5'));
     }
 
     /**
@@ -36,7 +62,7 @@ class CommentController extends Controller
         $this->validate($request, [
 //            'author' => 'required',
 //            'email' => 'required|email',
-            'body' => 'required'
+            'ocena' => 'required',
 //            'g-recaptcha-response' => 'required'
         ]);
 
@@ -44,7 +70,8 @@ class CommentController extends Controller
 
             'user_id'    =>Auth::user()->id,
             'body'      =>$request->body,
-            'avatar'      =>Auth::user()->avatar
+            'avatar'      =>Auth::user()->avatar,
+            'rating' =>$request->ocena
 
         ];
 
@@ -84,7 +111,16 @@ class CommentController extends Controller
     {
         $comments = Comment::all()->where('is_active',1);
 
-        return view('mnenja', compact('comments'));
+        $numRating = 1;
+        $sumRating = $comments->sum('rating');
+
+        $avgRating = ($sumRating / $numRating);
+
+
+
+
+
+        return view('mnenja', compact('comments', 'numRating', 'avgRating', 'sumRating'));
     }
 
 
