@@ -27,13 +27,13 @@ mix.styles([
 
 ], 'public/css/libs.css');
 
-mix.scripts([
-    'resources/assets/js/libs/bootstrap.js',
-    'resources/assets/js/libs/bootstrap.min.js',
-
-    'resources/assets/js/libs/sb-admin-2.js',
-    'resources/assets/js/libs/tinymce.min.js',
-    'resources/assets/js/libs/script.js'
-
-
-], 'public/js/libs.js');
+// mix.scripts([
+//     'resources/assets/js/libs/bootstrap.js',
+//     'resources/assets/js/libs/bootstrap.min.js',
+//
+//     'resources/assets/js/libs/sb-admin-2.js',
+//     'resources/assets/js/libs/tinymce.min.js',
+//     'resources/assets/js/libs/script.js'
+//
+//
+// ], 'public/js/libs.js');

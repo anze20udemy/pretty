@@ -58,7 +58,7 @@
                         <strong>salon za vse generacije.</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left " width="450" src="images/slike/20170109_151923.jpg" alt="">
+                    <img class="img-responsive img-border img-left " width="450" src="images/20170109_151923.jpg" alt="">
                     <hr class="visible-xs">
                     <p>
 
